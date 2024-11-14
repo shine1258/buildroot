@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot -g7ffaa3e4ba Configuration
+# Buildroot -gfe32831636 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -1357,7 +1357,7 @@ BR2_PACKAGE_FLASHROM_ARCH_SUPPORTS=y
 # BR2_PACKAGE_MEMTESTER is not set
 # BR2_PACKAGE_MEMTOOL is not set
 # BR2_PACKAGE_MHZ is not set
-# BR2_PACKAGE_MINICOM is not set
+BR2_PACKAGE_MINICOM=y
 # BR2_PACKAGE_MXT_APP is not set
 # BR2_PACKAGE_NANOCOM is not set
 # BR2_PACKAGE_NEARD is not set
@@ -1787,6 +1787,10 @@ BR2_PACKAGE_WOLFSSL_ASM_SUPPORTS=y
 # Database
 #
 # BR2_PACKAGE_BERKELEYDB is not set
+
+#
+# cppdb needs a toolchain w/ C++, threads, dynamic library
+#
 # BR2_PACKAGE_GDBM is not set
 # BR2_PACKAGE_HIREDIS is not set
 
@@ -1821,8 +1825,18 @@ BR2_PACKAGE_MONGODB_ARCH_SUPPORTS=y
 #
 # redis-plus-plus needs a toolchain w/ C++, threads
 #
-# BR2_PACKAGE_SQLCIPHER is not set
-# BR2_PACKAGE_SQLITE is not set
+
+#
+# sqlcipher conflicts with sqlite
+#
+BR2_PACKAGE_SQLITE=y
+# BR2_PACKAGE_SQLITE_STAT4 is not set
+# BR2_PACKAGE_SQLITE_ENABLE_COLUMN_METADATA is not set
+# BR2_PACKAGE_SQLITE_ENABLE_FTS3 is not set
+# BR2_PACKAGE_SQLITE_ENABLE_JSON1 is not set
+# BR2_PACKAGE_SQLITE_ENABLE_UNLOCK_NOTIFY is not set
+# BR2_PACKAGE_SQLITE_SECURE_DELETE is not set
+# BR2_PACKAGE_SQLITE_NO_SYNC is not set
 
 #
 # sqlitecpp needs a toolchain w/ C++11, gcc >= 4.9
@@ -3121,7 +3135,10 @@ BR2_PACKAGE_PROTOBUF_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBUNIBREAK is not set
 # BR2_PACKAGE_LIBUNISTRING is not set
 # BR2_PACKAGE_LINENOISE is not set
-# BR2_PACKAGE_NCURSES is not set
+BR2_PACKAGE_NCURSES=y
+# BR2_PACKAGE_NCURSES_WCHAR is not set
+# BR2_PACKAGE_NCURSES_TARGET_PROGS is not set
+BR2_PACKAGE_NCURSES_ADDITIONAL_TERMINFO=""
 # BR2_PACKAGE_NEWT is not set
 # BR2_PACKAGE_ONIGURUMA is not set
 # BR2_PACKAGE_PCRE is not set
