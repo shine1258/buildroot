@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot -g638a9dda16 Configuration
+# Buildroot -g69295b5761-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -922,7 +922,7 @@ BR2_PACKAGE_E2FSPROGS_RESIZE2FS=y
 # Fonts
 #
 # BR2_PACKAGE_BITSTREAM_VERA is not set
-# BR2_PACKAGE_CANTARELL is not set
+BR2_PACKAGE_CANTARELL=y
 # BR2_PACKAGE_DEJAVU is not set
 # BR2_PACKAGE_FONT_AWESOME is not set
 # BR2_PACKAGE_GHOSTSCRIPT_FONTS is not set
@@ -1997,7 +1997,19 @@ BR2_PACKAGE_JPEG_SIMD_SUPPORT=y
 # libdecor needs a toolchain w/ wchar, threads, C++, gcc >= 4.9
 #
 # BR2_PACKAGE_LIBDMTX is not set
-# BR2_PACKAGE_LIBDRM is not set
+BR2_PACKAGE_LIBDRM=y
+BR2_PACKAGE_LIBDRM_HAS_ATOMIC=y
+# BR2_PACKAGE_LIBDRM_INTEL is not set
+# BR2_PACKAGE_LIBDRM_RADEON is not set
+# BR2_PACKAGE_LIBDRM_AMDGPU is not set
+# BR2_PACKAGE_LIBDRM_NOUVEAU is not set
+# BR2_PACKAGE_LIBDRM_OMAP is not set
+# BR2_PACKAGE_LIBDRM_ETNAVIV is not set
+# BR2_PACKAGE_LIBDRM_EXYNOS is not set
+# BR2_PACKAGE_LIBDRM_FREEDRENO is not set
+# BR2_PACKAGE_LIBDRM_TEGRA is not set
+# BR2_PACKAGE_LIBDRM_VC4 is not set
+# BR2_PACKAGE_LIBDRM_INSTALL_TESTS is not set
 
 #
 # libepoxy needs an OpenGL and/or OpenGL EGL backend
@@ -2991,7 +3003,7 @@ BR2_PACKAGE_LIBNSPR_ARCH_SUPPORT=y
 #
 # libplist needs a toolchain w/ C++, threads
 #
-# BR2_PACKAGE_LIBPTHREAD_STUBS is not set
+BR2_PACKAGE_LIBPTHREAD_STUBS=y
 # BR2_PACKAGE_LIBPTHSEM is not set
 # BR2_PACKAGE_LIBPWQUALITY is not set
 # BR2_PACKAGE_LIBQB is not set

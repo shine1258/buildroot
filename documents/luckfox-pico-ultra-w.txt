@@ -1,0 +1,32 @@
+luckfox-pico-ultra-w开发板笔记
+
+编译完成后挂载 output/images/rootfs.ext4 镜像文件
+mkdir /mnt/image
+mount output/images/rootfs.ext4 /mnt/image
+cd /mnt/image
+
+修改镜像内文件时注意不要把路径写成系统路径，如 /etc/network/interfaces，应该写成 ./etc/network/interfaces
+
+在 ./etc/network/interfaces 文件中添加(地址信息替换为自己开发环境的)
+auto eth0
+iface eth0 inet static
+address 192.168.6.222
+netmask 255.255.255.0
+broadcast 192.168.6.255
+gateway 192.168.6.1
+
+修改 ./etc/ssh/sshd_config 文件
+PermitRootLogin yes
+PermitEmptyPasswords yes
+
+在 ./etc/init.d/rcS 文件中添加
+# 调整文件系统大小
+resize2fs /dev/disk/by-label/rootfs
+
+将应用程序拷贝到 root/ 目录下
+
+卸载镜像文件
+cd ~
+umount /mnt/image
+
+将镜像文件烧录到开发板
